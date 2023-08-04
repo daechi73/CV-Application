@@ -9,8 +9,6 @@ const Form = (props) => {
       ...props.inputValue,
       [`${temp}`]: e.target.value,
     };
-    console.log(temp);
-    console.log(value);
     props.setValue(value);
   };
   return (
