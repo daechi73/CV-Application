@@ -13,7 +13,7 @@ const CVInfoHolder = () => {
     "CV-experience-startDate": "",
     "CV-experience-endDate": "",
     "CV-experience-description": "",
-    "CV-experience-personal-content": "",
+    "CV-personal-content": "",
   };
 };
 
