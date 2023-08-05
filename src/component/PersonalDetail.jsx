@@ -1,4 +1,4 @@
-const PersonalDetail = (props) => {
+const PersonalDetailSection = (props) => {
   return (
     <section id="CV-personalDetail" className="CV-personalDetail CV">
       <div id="CV-personalDetail-name">
@@ -17,4 +17,4 @@ const PersonalDetail = (props) => {
   );
 };
 
-export default PersonalDetail;
+export default PersonalDetailSection;
