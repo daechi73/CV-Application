@@ -33,37 +33,38 @@ const Form = (props) => {
       ...props.inputValue,
       [`${CVId}`]: e.target.value,
     };
+    console.log(temp[0]);
     sectionActivator(e.target.value, temp[0], CVId);
     props.setValue(value);
   };
   return (
     <>
       <form className="forms">
-        <section className="form-personalDetail form">
-          <div className="form-personalDetail-title">Personal Details:</div>
-          <label htmlFor="form-personalDetail-name">Full Name:</label>
+        <section className="form-privateDetail form">
+          <div className="form-privateDetail-title">Personal Details:</div>
+          <label htmlFor="form-privateDetail-name">Full Name:</label>
           <input
             onChange={changeValue}
             type="text"
-            id="form-personalDetail-name"
+            id="form-privateDetail-name"
           />
-          <label htmlFor="form-personalDetail-email">Email:</label>
+          <label htmlFor="form-privateDetail-email">Email:</label>
           <input
             onChange={changeValue}
             type="email"
-            id="form-personalDetail-email"
+            id="form-privateDetail-email"
           />
-          <label htmlFor="form-personalDetail-phone">Phone number:</label>
+          <label htmlFor="form-privateDetail-phone">Phone number:</label>
           <input
             onChange={changeValue}
             type="text"
-            id="form-personalDetail-phone"
+            id="form-privateDetail-phone"
           />
-          <label htmlFor="form-personalDetail-address">Address:</label>
+          <label htmlFor="form-privateDetail-address">Address:</label>
           <input
             onChange={changeValue}
             type="text"
-            id="form-personalDetail-address"
+            id="form-privateDetail-address"
           />
         </section>
         <section className="form-education form">

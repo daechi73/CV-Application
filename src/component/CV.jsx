@@ -1,15 +1,15 @@
 import "./CV.css";
-import PersonalDetailSection from "./PersonalDetail";
+import PrivateDetailSection from "./PrivateDetail";
 import ExperiencesSection from "./Experiences";
 import EducationSection from "./Education";
-import PersonalSection from "./PersonalDetail";
+import PersonalSection from "./PrivateDetail";
 
 const CV = (props) => {
   return (
     <>
       <div className="container-CV">
-        {props.activateSections.personalDetail ? (
-          <PersonalDetailSection inputValue={props.inputValue} />
+        {props.activateSections.privateDetail ? (
+          <PrivateDetailSection inputValue={props.inputValue} />
         ) : (
           ""
         )}

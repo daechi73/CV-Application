@@ -1,9 +1,9 @@
 const CVInfoHolder = () => {
   return {
-    "CV-personalDetail-name": "",
-    "CV-personalDetail-email": "",
-    "CV-personalDetail-phone": "",
-    "CV-personalDetail-address": "",
+    "CV-privateDetail-name": "",
+    "CV-privateDetail-email": "",
+    "CV-privateDetail-phone": "",
+    "CV-privateDetail-address": "",
     "CV-education-institutionName": "",
     "CV-education-degree": "",
     "CV-education-startDate": "",
@@ -19,7 +19,7 @@ const CVInfoHolder = () => {
 
 const CVSectionPass = () => {
   return {
-    personalDetail: false,
+    privateDetail: false,
     education: false,
     experience: false,
     personal: false,
