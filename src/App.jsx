@@ -3,17 +3,12 @@ import "./App.css";
 import Header from "./component/Header";
 import Form from "./component/Form";
 import CV from "./component/CV";
-import CVInfoHolder from "./component/CV-infoHolder";
+import { CVInfoHolder, CVSectionPass } from "./component/useStateInfoHolders";
 
 function App() {
   const cvInfoHolder = CVInfoHolder();
   const [inputValue, setValue] = useState(cvInfoHolder);
-  const [activateSections, setActivateSections] = useState({
-    personalDetail: false,
-    education: false,
-    experience: false,
-    personal: false,
-  });
+  const [activateSections, setActivateSections] = useState(CVSectionPass);
   return (
     <>
       <Header />
@@ -22,8 +17,9 @@ function App() {
           setValue={setValue}
           inputValue={inputValue}
           setActivateSections={setActivateSections}
+          activateSections={activateSections}
         />
-        <CV inputValue={inputValue} />
+        <CV inputValue={inputValue} activateSections={activateSections} />
       </div>
     </>
   );
