@@ -2,10 +2,10 @@ import "./Form.css";
 import { useState } from "react";
 
 const Form = (props) => {
-  const changeActivateSections = (valid) => {
+  const changeActivateSections = (validation, section) => {
     const newActivateSections = {
       ...props.activateSections,
-      personalDetail: valid,
+      [section]: validation,
     };
     console.log(newActivateSections);
     props.setActivateSections(newActivateSections);
@@ -17,9 +17,9 @@ const Form = (props) => {
       if (i.includes(section)) {
         if (i !== CVId) {
           if (!props.inputValue[i] && !value) {
-            return changeActivateSections(false);
+            return changeActivateSections(false, section);
           } else {
-            return changeActivateSections(true);
+            return changeActivateSections(true, section);
           }
         }
       }
