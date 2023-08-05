@@ -7,13 +7,19 @@ import CVInfoHolder from "./component/CV-infoHolder";
 
 function App() {
   const cvInfoHolder = CVInfoHolder();
-  const [value, setValue] = useState(cvInfoHolder);
+  const [inputValue, setValue] = useState(cvInfoHolder);
+  const [activateSections, setActivateSections] = useState({
+    personalDetail: false,
+    education: false,
+    experience: false,
+    personal: false,
+  });
   return (
     <>
       <Header />
       <div className="content">
-        <Form setValue={setValue} inputValue={value} />
-        <CV inputValue={value} />
+        <Form setValue={setValue} inputValue={inputValue} />
+        <CV inputValue={inputValue} />
       </div>
     </>
   );
