@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./component/Header";
 import Form from "./component/Form";
 import CV from "./component/CV";
-import { CVInfoHolder, CVSectionPass } from "./component/useStateInfoHolders";
+import { CVInfoHolder, CVSectionPass } from "./component/UseStateInfoHolders";
 
 function App() {
   const cvInfoHolder = CVInfoHolder();
