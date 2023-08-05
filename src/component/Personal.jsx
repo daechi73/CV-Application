@@ -1,4 +1,4 @@
-const PersonalSection = () => {
+const PersonalSection = (props) => {
   return (
     <section className="CV-personal">
       <div id="CV-personal-content">

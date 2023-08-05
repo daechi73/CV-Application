@@ -1,4 +1,4 @@
-const ExperiencesSection = () => {
+const ExperiencesSection = (props) => {
   return (
     <section className="CV-experience">
       <div id="CV-experience-company">
