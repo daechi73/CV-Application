@@ -17,4 +17,13 @@ const CVInfoHolder = () => {
   };
 };
 
-export default CVInfoHolder;
+const CVSectionPass = () => {
+  return {
+    personalDetail: false,
+    education: false,
+    experience: false,
+    personal: false,
+  };
+};
+
+export { CVInfoHolder, CVSectionPass };
