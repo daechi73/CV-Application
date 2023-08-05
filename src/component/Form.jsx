@@ -2,13 +2,38 @@ import "./Form.css";
 import { useState } from "react";
 
 const Form = (props) => {
+  const changeActivateSections = (valid) => {
+    const newActivateSections = {
+      ...props.activateSections,
+      personalDetail: valid,
+    };
+    console.log(newActivateSections);
+    props.setActivateSections(newActivateSections);
+  };
+
+  const sectionActivator = (value, section, CVId) => {
+    for (const i in props.inputValue) {
+      //console.log(i);
+      if (i.includes(section)) {
+        if (i !== CVId) {
+          if (!props.inputValue[i] && !value) {
+            return changeActivateSections(false);
+          } else {
+            return changeActivateSections(true);
+          }
+        }
+      }
+    }
+  };
+
   const changeValue = (e) => {
-    let temp = e.target.id.split("-").splice(1);
-    temp = "CV-" + temp[0] + "-" + temp[1];
+    const temp = e.target.id.split("-").splice(1);
+    const CVId = "CV-" + temp[0] + "-" + temp[1];
     const value = {
       ...props.inputValue,
-      [`${temp}`]: e.target.value,
+      [`${CVId}`]: e.target.value,
     };
+    sectionActivator(e.target.value, temp[0], CVId);
     props.setValue(value);
   };
   return (
