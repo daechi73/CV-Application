@@ -1,4 +1,4 @@
-const personalSection = () => {
+const PersonalSection = () => {
   return (
     <section className="CV-personal">
       <div id="CV-personal-content">
@@ -8,4 +8,4 @@ const personalSection = () => {
   );
 };
 
-export default personalSection;
+export default PersonalSection;

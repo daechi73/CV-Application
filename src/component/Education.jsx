@@ -1,4 +1,4 @@
-const educationSection = () => {
+const EducationSection = () => {
   return (
     <section id="CV-education">
       <div id="CV-education-institutionName">
@@ -16,4 +16,4 @@ const educationSection = () => {
     </section>
   );
 };
-export default educationSection;
+export default EducationSection;

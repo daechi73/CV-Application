@@ -1,4 +1,4 @@
-const experiencesSection = () => {
+const ExperiencesSection = () => {
   return (
     <section className="CV-experience">
       <div id="CV-experience-company">
@@ -19,3 +19,5 @@ const experiencesSection = () => {
     </section>
   );
 };
+
+export default ExperiencesSection;
