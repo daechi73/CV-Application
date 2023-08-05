@@ -18,7 +18,11 @@ function App() {
     <>
       <Header />
       <div className="content">
-        <Form setValue={setValue} inputValue={inputValue} />
+        <Form
+          setValue={setValue}
+          inputValue={inputValue}
+          setActivateSections={setActivateSections}
+        />
         <CV inputValue={inputValue} />
       </div>
     </>
