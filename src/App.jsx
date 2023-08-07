@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Form from "./components/Form";
 import CV from "./components/CV";
-import { CVInfoHolder, CVSectionPass } from "./components/UseStateInfoHolders";
+import { CVInfoHolder, CVSectionPass } from "./logic/UseStateInfoHolders";
 
 function App() {
   const cvInfoHolder = CVInfoHolder();
