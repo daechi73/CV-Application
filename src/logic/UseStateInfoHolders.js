@@ -26,4 +26,12 @@ const CVSectionPass = () => {
   };
 };
 
-export { CVInfoHolder, CVSectionPass };
+const PrivatePass = () => {
+  return {
+    email: false,
+    address: false,
+    phone: false,
+  };
+};
+
+export { CVInfoHolder, CVSectionPass, PrivatePass };
