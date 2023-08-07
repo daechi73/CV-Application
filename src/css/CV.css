@@ -3,6 +3,23 @@
   height: 100vh;
   border: solid;
   flex: 1;
-  padding: 80px;
   margin: 20px 70px 20px 70px;
+}
+.CV-privateDetail {
+  background-color: rgb(49, 23, 23);
+  color: white;
+  min-height: 100px;
+  padding: 20px;
+  text-align: center;
+}
+#CV-privateDetail-name {
+  font-size: 30px;
+}
+.svg-email {
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+.svg-phone {
+  vertical-align: bottom;
+  margin-right: 10px;
 }
