@@ -18,7 +18,6 @@ const Form = (props) => {
       for (const i in props.inputValue) {
         if (i.includes(section)) {
           if (i !== CVId || CVId === "CV-personal-content") {
-            console.log(props.inputValue[i]);
             if (CVId === "CV-personal-content")
               if (value !== "") return changeActivateSections(true, section);
               else return changeActivateSections(false, section);

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-import Header from "./component/Header";
-import Form from "./component/Form";
-import CV from "./component/CV";
-import { CVInfoHolder, CVSectionPass } from "./component/UseStateInfoHolders";
+import Header from "./components/Header";
+import Form from "./components/Form";
+import CV from "./components/CV";
+import { CVInfoHolder, CVSectionPass } from "./components/UseStateInfoHolders";
 
 function App() {
   const cvInfoHolder = CVInfoHolder();
