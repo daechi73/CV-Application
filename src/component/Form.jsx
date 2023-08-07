@@ -1,5 +1,4 @@
 import "./Form.css";
-import { useState } from "react";
 
 const Form = (props) => {
   const changeActivateSections = (validation, section) => {
@@ -8,18 +7,27 @@ const Form = (props) => {
       [section]: validation,
     };
     console.log(newActivateSections);
+
     props.setActivateSections(newActivateSections);
   };
 
   const sectionActivator = (value, section, CVId) => {
-    for (const i in props.inputValue) {
-      //console.log(i);
-      if (i.includes(section)) {
-        if (i !== CVId) {
-          if (!props.inputValue[i] && !value) {
-            return changeActivateSections(false, section);
-          } else {
-            return changeActivateSections(true, section);
+    let count = 0;
+    if (value !== "") return changeActivateSections(true, section);
+    else {
+      for (const i in props.inputValue) {
+        if (i.includes(section)) {
+          if (i !== CVId || CVId === "CV-personal-content") {
+            console.log(props.inputValue[i]);
+            if (CVId === "CV-personal-content")
+              if (value !== "") return changeActivateSections(true, section);
+              else return changeActivateSections(false, section);
+            if (props.inputValue[i] !== "") {
+              return changeActivateSections(true, section);
+            } else {
+              count++;
+              if (count === 3) changeActivateSections(false, section);
+            }
           }
         }
       }
@@ -33,7 +41,6 @@ const Form = (props) => {
       ...props.inputValue,
       [`${CVId}`]: e.target.value,
     };
-    console.log(temp[0]);
     sectionActivator(e.target.value, temp[0], CVId);
     props.setValue(value);
   };
@@ -41,7 +48,7 @@ const Form = (props) => {
     <>
       <form className="forms">
         <section className="form-privateDetail form">
-          <div className="form-privateDetail-title">Personal Details:</div>
+          <div className="form-privateDetail-title">Private Details:</div>
           <label htmlFor="form-privateDetail-name">Full Name:</label>
           <input
             onChange={changeValue}
