@@ -1,4 +1,4 @@
-import "./Form.css";
+import "../css/Form.css";
 
 const Form = (props) => {
   const changeActivateSections = (validation, section) => {

@@ -1,4 +1,4 @@
-import "./CV.css";
+import "../css/CV.css";
 import PrivateDetailSection from "./PrivateDetail";
 import ExperiencesSection from "./Experiences";
 import EducationSection from "./Education";
