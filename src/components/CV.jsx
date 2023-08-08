@@ -9,7 +9,10 @@ const CV = (props) => {
     <>
       <div className="container-CV">
         {props.activateSections.privateDetail ? (
-          <PrivateDetailSection inputValue={props.inputValue} />
+          <PrivateDetailSection
+            privateInfos={props.privateInfos}
+            inputValue={props.inputValue}
+          />
         ) : (
           ""
         )}
