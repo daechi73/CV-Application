@@ -1,14 +1,40 @@
 .forms {
   display: flex;
   flex-direction: column;
-  margin: 25px 10px 40px 80px;
-  width: 200px;
-  border: solid;
-  border-radius: 10px;
-  padding: 20px;
-  height: 500px;
+  width: 250px;
+  border-radius: 12px;
+  padding: 10px;
+  height: 400px;
   overflow-y: scroll;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  align-items: center;
+  gap: 20px;
+  border: none;
+  background-color: #fff;
+}
+.forms input {
+  border-radius: 7px;
+  border: none;
+  background-color: #e4e4e281;
+  height: 30px;
+  padding: 5px;
+}
+.forms textarea {
+  border-radius: 7px;
+  border: none;
+  background-color: #e4e4e281;
+  padding: 5px;
+}
+.form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.form-privateDetail-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
 }
 .forms::-webkit-scrollbar {
   width: 12px;
@@ -26,4 +52,5 @@
 .form {
   display: flex;
   flex-direction: column;
+  max-width: 200px;
 }
