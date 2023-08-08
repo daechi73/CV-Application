@@ -17,7 +17,7 @@ const Form = (props) => {
     else {
       for (const i in props.inputValue) {
         if (i.includes(section)) {
-          if (i !== CVId || CVId === "CV-personal-content") {
+          if (i !== CVId) {
             if (CVId === "CV-personal-content")
               if (value !== "") return changeActivateSections(true, section);
               else return changeActivateSections(false, section);
@@ -149,7 +149,7 @@ const Form = (props) => {
             rows="5"
           ></textarea>
         </section>
-        <section className="form-personal form">
+        {/* <section className="form-personal form">
           <div className="form-personal-title">Personal:</div>
           <label htmlFor="form-personal-content"></label>
           <textarea
@@ -159,7 +159,7 @@ const Form = (props) => {
             cols="30"
             rows="5"
           ></textarea>
-        </section>
+        </section> */}
         <button type="submit">Save</button>
       </form>
     </>
