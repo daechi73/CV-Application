@@ -6,11 +6,11 @@
   margin: 20px 70px 20px 70px;
   display: flex;
   flex-direction: column;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 .CV-privateDetail {
   background-color: rgb(49, 23, 23);
   color: white;
-  min-height: 170px;
   padding: 20px;
   text-align: center;
 }

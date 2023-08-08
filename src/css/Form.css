@@ -1,8 +1,27 @@
 .forms {
-  max-width: 600px;
-  height: 100%;
   display: flex;
   flex-direction: column;
+  margin: 25px 10px 40px 80px;
+  width: 200px;
+  border: solid;
+  border-radius: 10px;
+  padding: 20px;
+  height: 500px;
+  overflow-y: scroll;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+.forms::-webkit-scrollbar {
+  width: 12px;
+}
+
+.forms::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.forms::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 .form {
   display: flex;
