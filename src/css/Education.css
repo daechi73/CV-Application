@@ -1,0 +1,17 @@
+#CV-education {
+  border-bottom: solid;
+  padding: 50px;
+}
+.CV-education-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+.CV-education-content {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.CV-education {
+  flex: 1;
+}

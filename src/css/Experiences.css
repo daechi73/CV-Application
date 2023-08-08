@@ -1,0 +1,13 @@
+.CV-experience {
+  padding: 50px;
+}
+.CV-experience-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+.CV-experience-content {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
