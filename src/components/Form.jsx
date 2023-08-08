@@ -33,6 +33,20 @@ const Form = (props) => {
     }
   };
 
+  const privateDetailInfoActivator = (privateInfo, value) => {
+    if (value) {
+      for (const i in props.privateInfos) {
+        if (i === privateInfo)
+          return props.setPrivateInfos({ ...props.privateInfos, [i]: true });
+      }
+    } else {
+      for (const i in props.privateInfos) {
+        if (i === privateInfo)
+          return props.setPrivateInfos({ ...props.privateInfos, [i]: false });
+      }
+    }
+  };
+
   const changeValue = (e) => {
     const temp = e.target.id.split("-").splice(1);
     const CVId = "CV-" + temp[0] + "-" + temp[1];
@@ -41,6 +55,7 @@ const Form = (props) => {
       [`${CVId}`]: e.target.value,
     };
     sectionActivator(e.target.value, temp[0], CVId);
+    privateDetailInfoActivator(temp[1], e.target.value);
     props.setValue(value);
   };
   return (
